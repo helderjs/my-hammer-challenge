@@ -1,0 +1,9 @@
+city:
+    type:     rest
+    resource: MyHammer\Job\Controller\CityController
+category:
+    type:     rest
+    resource: MyHammer\Job\Controller\CategoryController
+job:
+    type:     rest
+    resource: MyHammer\Job\Controller\JobController

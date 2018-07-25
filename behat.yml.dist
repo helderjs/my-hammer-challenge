@@ -1,0 +1,17 @@
+default:
+    suites:
+        default:
+            paths: [ tests/features ]
+            contexts:
+                - MyHammer\Job\Tests\Behat\Context\FeatureContext:
+                    kernel: '@kernel'
+
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: tests/features/bootstrap/bootstrap.php
+                class: MyHammer\Job\Kernel
+        Behat\MinkExtension:
+            sessions:
+               default:
+                    symfony2: ~
