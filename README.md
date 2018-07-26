@@ -10,11 +10,13 @@
 
 Set configuration: `cp .env.dist .env`
 
+Create log and cache folders: `mkdir -p var/cache & mkdir -p var/log`
+
 Install application dependencies: `php composer.phar install`
  
 Add `127.0.0.1 myhammer.vm` to `/etc/hosts`
  
-Build images and start containers: `docker-composer up`
+Build images and start containers: `docker-composer up` (wait for containers start completely)
 
 Create DB Schema: `docker-compose exec php ./bin/console doctrine:schema:create`
 
